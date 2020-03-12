@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Xam.Plugin.SimpleStaticMap.Samples.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Xam.Plugin.SimpleStaticMap;assembly=Xam.Plugin.SimpleStaticMap"
+    xmlns:local="clr-namespace:Xam.Plugin.SimpleStaticMap.Samples.ViewModel;assembly=Xam.Plugin.SimpleStaticMap.Samples"
+    Title="Sample SimpleStaticMap"
+    BackgroundColor="#F0F0F0"
+    Visual="Material">
+
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <controls:StaticMap
+            x:Name="map"
+            ApiKey="SET YOUR APIKEY HERE"
+            Aspect="AspectFill"
+            HorizontalOptions="FillAndExpand"
+            IsVisible="true"
+            Pins="{Binding Pins}"
+            Polylines="{Binding Polylines}"
+            VerticalOptions="FillAndExpand"
+            Zoom="6" />
+    </ContentPage.Content>
+</ContentPage>
