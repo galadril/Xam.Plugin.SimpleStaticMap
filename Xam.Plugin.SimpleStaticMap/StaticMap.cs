@@ -116,7 +116,6 @@ namespace Xam.Plugin.SimpleStaticMap
 
         #endregion
 
-
         #region Private
 
         /// <summary>
